@@ -5,3 +5,125 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+:root {
+    --dark: #34495E;
+    --light: #FFFFFF;
+    --success: #0ABF30;
+    --error: #E24D4C;
+    --warning: #e9bd0c;
+    --info: #3498DB;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--dark);
+}
+
+.notifications {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+.notifications :where(.toast, .column) {
+    display: flex;
+    align-items: center;
+}
+
+.notifications .toast {
+    width: 400px;
+    list-style: none;
+    border-radius: 4px;
+    padding: 16px 17px;
+    margin-bottom: 10px;
+    background-color: var(--light);
+    justify-content: space-between;
+    position: relative;
+    animation: show_toast 0.3s ease forwards;
+}
+@keyframes show_toast {
+    0% {
+        transform: translateX(10%);
+    }
+    40% {
+        transform: translateX(-5%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+.toast::before{
+    content: "";
+    height: 3px;
+    width: 60%;
+    bottom: 0;
+    left: 0;
+    position:absolute;
+    animation: progressbar 3s linear forwards;
+}
+@keyframes progressbar {
+    100% {
+        width: 0%;
+    }
+
+}
+.toast.success::before, .btn#success {
+    background: var(--success);
+}
+.toast.success .column i::before {
+    color: var(--success);
+}
+
+.toast.error::before, .btn#error {
+    background: var(--error);
+}
+.toast.error .column i::before {
+    color: var(--error);
+}
+
+.toast.warning::before, .btn#warning {
+    background: var(--warning);
+}
+.toast.warning .column i::before {
+    color: var(--warning);
+}
+
+.toast.info::before, .btn#info {
+    background: var(--info);
+}
+.toast.info .column i::before {
+    color: var(--info);
+}
+
+.toast .column {
+    font-size: 1.25rem;
+}
+.toast .column span{
+    font-size: 1.07rem;
+    margin-left: 12px;
+}
+
+.toast i:last-child {
+    color: #aeb0d7;
+    cursor: pointer;
+}
+
+.toast i:last-child:hover {
+    color: var(--dark);
+}
+
+.buttons .btn {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1.2rem;
+}
