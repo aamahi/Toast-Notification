@@ -1,50 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toast Notification</title>
-    <!-- Font Awsome CDN Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Toast Notification | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <ul class="notifications">
-        <li class="toast success">
-            <div class="column">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Sucess: This is success toast.</span>
-            </div>
-            <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li class="toast error">
-            <div class="column">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Error: This is error toast.</span>
-            </div>
-            <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li class="toast info">
-            <div class="column">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Info: This is info toast.</span>
-            </div>
-            <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li class="toast warning">
-            <div class="column">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>warning: This is warning toast.</span>
-            </div>
-            <i class="fa-solid fa-xmark"></i>
-        </li>
-    </ul>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <ul class="notifications"></ul>
     <div class="buttons">
-        <button class="btn" id="success">Success</button>
-        <button class="btn" id="error">Error</button>
-        <button class="btn" id="info">Info</button>
-        <button class="btn" id="warning">Warning</button>
+      <button class="btn" id="success">Success</button>
+      <button class="btn" id="error">Error</button>
+      <button class="btn" id="warning">Warning</button>
+      <button class="btn" id="info">Info</button>
     </div>
-</body>
+  </body>
 </html>
